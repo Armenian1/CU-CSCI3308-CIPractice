@@ -1,7 +1,5 @@
-install: make get-deps
-./configure && make && make test
+install: make dep
 language: c
-script: scons
+script: make && make test
 compiler: gcc
-before_install:
-	- test -n $CC && unset CC
+sudo: required
